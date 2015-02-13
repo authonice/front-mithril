@@ -1,11 +1,11 @@
 {
   "name": "authonice-mithril",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "authonice frontend for mithril",
   "main": "index.js",
   "scripts": {
     "js": "browserify . -x mithril --standalone authonice -o dist/authonice-mithril.js && uglifyjs dist/authonice-mithril.js -o dist/authonice-mithril.min.js",
-    "bump": "npm run js && bower version patch && npm version patch && npm publish",
+    "bump": "npm run js && mversion patch -m && npm publish",
     "test": "mocha",
     "watch": "mocha -w"
   },
@@ -28,6 +28,7 @@
     "browserify": "^8.1.3",
     "chai": "^2.0.0",
     "mocha": "^2.1.0",
+    "mversion": "^1.9.0",
     "uglify-js": "^2.4.16"
   },
   "dependencies": {
