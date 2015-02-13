@@ -31,7 +31,7 @@ var authonice = require('authonice-mithril');
 ### requirejs
 
 ```js
-define(['mithril','authonice'], function(m, authonice){
+define(['mithril','authonice-mithril'], function(m, authonice){
   
 });
 ```
