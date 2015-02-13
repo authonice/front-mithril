@@ -16,12 +16,36 @@ It's designed to work with lots of [backend languages](http://authonice.github.i
 
 If we don't have a module for the frontend-framework/backend-language/auth-service you want to support, [ask us](https://github.com/authonice/authonice.github.io/issues/new?title=Request:%20&labels=request) or [contribute](http://authonice.github.io/contribute)!
 
+
 ## installation
 
+You can install with bower, npm, [download](https://github.com/authonice/front-mithril/archive/master.zip) or just add script tags to your HTML.
+
+
+### webpack/browserify/etc
+
+```js
+var authonice = require('authonice-mithril');
 ```
-npm install authonice-mithril
+
+### requirejs
+
+```js
+define(['mithril','authonice'], function(m, authonice){
+  
+});
+```
+
+### plain browser globals
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mithril/0.1.30/mithril.min.js"></script>
+<script src="http://authonice.github.io/front-mithril/dist/authonice/authonice-mithril.js"></script>
 ```
 
 ## usage
 
+
 ### TODO
+
+
+[logo]: http://authonice.github.io/logo.png
