@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "js": "browserify . -x mithril --standalone authonice -o dist/authonice-mithril.js && uglifyjs dist/authonice-mithril.js -o dist/authonice-mithril.min.js",
-    "bump": "npm run js && npm version patch && bower version patch && npm publish",
+    "bump": "npm run js && bower version patch && npm version patch && npm publish",
     "test": "mocha",
     "watch": "mocha -w"
   },
