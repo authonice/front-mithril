@@ -1,6 +1,6 @@
 {
   "name": "authonice-mithril",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "authonice frontend for mithril",
   "main": "index.js",
   "scripts": {
