@@ -1,0 +1,36 @@
+{
+  "name": "authonice-mithril",
+  "version": "0.0.1",
+  "description": "authonice frontend for mithril",
+  "main": "index.js",
+  "scripts": {
+    "js": "browserify . -x mithril --standalone authonice -o dist/authonice-mithril.js && uglifyjs dist/authonice-mithril.js -o dist/authonice-mithril.min.js",
+    "bump": "npm run js && npm version patch && bower version patch && npm publish",
+    "test": "mocha",
+    "watch": "mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/authonice/front-mithril.git"
+  },
+  "keywords": [
+    "authonice",
+    "mithril",
+    "authentication"
+  ],
+  "author": "David Konsumer <konsumer@jetboystudio.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/authonice/front-mithril/issues"
+  },
+  "homepage": "https://github.com/authonice/front-mithril",
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "chai": "^2.0.0",
+    "mocha": "^2.1.0",
+    "uglify-js": "^2.4.16"
+  },
+  "dependencies": {
+    "mithril": "^0.1.30"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "authonice-mithril",
+  "version": "0.0.1",
+  "homepage": "https://github.com/authonice/front-mithril",
+  "authors": [
+    "David Konsumer <konsumer@jetboystudio.com>"
+  ],
+  "description": "authonice frontend for mithril",
+  "main": "dist/authonice-mithril.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "authonice",
+    "mithril",
+    "authentication"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mithril": "~0.1.30"
+  }
+}
