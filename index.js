@@ -16,11 +16,10 @@ var authonice = module.exports = {
       url: authonice.mountPoint + '/login',
       data: {email:email, password:password},
       unwrapSuccess: function(res) {
-        localStorage.token = res.token;
-        return res.token;
+        localStorage.token = res;
+        return res;
       }
-    })
-    .then(this.token);
+    }).then(this.token);
   },
   
   // forget token
@@ -71,7 +70,6 @@ var authonice = module.exports = {
         m.route(authonice.loginRoute);
       }
     });
-
     return deferred.promise;
   }
 };
