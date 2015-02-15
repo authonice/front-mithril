@@ -39,7 +39,7 @@ define(['mithril','authonice-mithril'], function(m, authonice){
 ### plain browser globals
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mithril/0.1.30/mithril.min.js"></script>
-<script src="http://authonice.github.io/front-mithril/dist/authonice/authonice-mithril.js"></script>
+<script src="https://rawgit.com/authonice/front-mithril/master/dist/authonice-mithril.min.js"></script>
 ```
 
 ## usage
