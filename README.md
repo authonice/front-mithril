@@ -45,7 +45,16 @@ define(['mithril','authonice-mithril'], function(m, authonice){
 ## usage
 
 
-### TODO
+The API is très simple:
 
+- `loggedIn()` - does the user have a token?
+- `login(email, password)` - trade credentials for a token
+- `logout()` - forget token
+- `register(email, password)` - save some login credentials
+- `verify(token)` - prove that the user got an email (or read the console or whatever)
+- `user()` - get the current server-side user
+- `req()` - a wrapper for `m.request` that ensures authentication & defaults to `GET`
+
+For an in-depth example see [demo-node-mithril](https://github.com/authonice/demo-node-mithril)
 
 [logo]: http://authonice.github.io/logo.png
