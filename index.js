@@ -48,17 +48,31 @@ var authonice = module.exports = {
 
   // get current user object
   user: function(){
-    return authonice.req(authonice.mountPoint + '/user');
+    return authonice.get(authonice.mountPoint + '/user');
+  },
+
+  // shorthand for req({method:'GET'})
+  get: function(url, options){
+    options = options || {};
+    options.url = url;
+    options.method = 'GET';
+    return authonice._req(options);
+  },
+
+  // shorthand for req({method:'POST'})
+  post: function(url, data, options){
+    options = options || {};
+    options.url = url;
+    options.method = 'POST';
+    options.data = data;
+    return authonice._req(options);
   },
 
   // make an authenticated request
-  req: function(options){
-    if (typeof options == 'string'){
-      options = {method:'GET', url:options};
-    }
+  _req: function(options){
     var oldConfig = options.config || function(){};
     options.config = function(xhr) {
-      xhr.setRequestHeader("authoniceorization", "Bearer " + authonice.token());
+      xhr.setRequestHeader("Authorization", "Bearer " + authonice.token());
       oldConfig(xhr);
     };
 
